@@ -1,8 +1,16 @@
+var niveauDifficulte = 10;
+
 function game () {
- 
-    var aDeviner = Math.round(Math.random() * 10);
+    if (valeur == 'lvl1') {
+        niveauDifficulte = 10;
+    }
+    else if (valeur == 'lvl2') {
+        niveauDifficulte = 20;
+    }
     var essais = 3;
+    var aDeviner = Math.round(Math.random() * niveauDifficulte);
     var essai = window.prompt('Entrez votre chiffre');
+    console.log(aDeviner);
     essai = parseInt(essai, 10); // Pour convertir le contenu de la variable en int (base 10)
     while (essai != aDeviner && essais > 0) {
         essais--;

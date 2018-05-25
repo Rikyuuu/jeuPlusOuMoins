@@ -7,6 +7,9 @@ var startButton = document.getElementById('startButton');
 var validerSelectLevelButton = document.getElementById('validerSelectLevelChoice');
 var validerGameWindowButton = document.getElementById('validerGameWindow');
 
+var radios = document.getElementsByName('lvl');
+var valeur;
+
 
 
 // Lancement des fonctions à partir des boutons
@@ -27,14 +30,12 @@ function levelChoice () {
     selectLevelWindow.setAttribute("class", "hidden");
     gameWindow.classList.remove("hidden");
 
-    var radios = document.getElementsByName('lvl');
-    var valeur;
-    for(var i = 0; i < boutons.length; i++){
-        if(lvl[i].checked){
-            valeur = lvl[i].value;
+    for(var i = 0; i < radios.length; i++){
+        if(radios[i].checked){
+            valeur = radios[i].value;
         }
     }
-    alert(valeur);
+    game();
 }
 
 
