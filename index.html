@@ -4,27 +4,28 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/style.css">
         <title>Document</title>
     </head>
     <body>
         <h1>Le jeu du plus ou moins</h1>
-        <div class="startWindow">
+        <div id="startWindow">
             <input type="button" value="Commencer" id="start">
         </div>
-        <div class="SelectLevelWindow">
-            <form id="formDifficulte" method="GET">
+        <div class="selectLevelWindow hidden" id="test">
+            <form id="formDifficulte">
                 <label for="lvl1">Niveau 1</label>
                 <input type="radio" name="lvl" value="lvl1" class="radioButton" id="lvl1">
                 <label for="lvl2">Niveau 2</label>
                 <input type="radio" name="lvl" value="lvl2" class="radioButton" id="lvl2">
-                <button>Valider</button>
+                <button id="validerSelectLevelChoice">Valider</button>
             </form>
         </div>
         <div class="gameWindow">
             <h2>Devinez quel est le chiffre</h2>
             <label for="reply">Réponse</label>
             <input type="text" name="reply" autocomplete="off">
-            <button>Valider</button>
+            <button id="validerGameWindowButton">Valider</button>
         </div>
         
         <script src="js/startGame.js"></script>
