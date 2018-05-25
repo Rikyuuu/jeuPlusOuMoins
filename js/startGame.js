@@ -10,19 +10,15 @@ var validerGameWindowButton = document.getElementById('validerGameWindow');
 var radios = document.getElementsByName('lvl');
 var levelValue;
 
-
-
 // Lancement des fonctions à partir des boutons
 startButton.addEventListener('click', startGame);
 validerSelectLevelButton.addEventListener('click', levelChoice);
 // validerGameWindowButton.addEventListener('click', );
 
-
 // Fonction lancement du jeu
 function startGame () {
     startButton.setAttribute("class", "hidden");
     selectLevelWindow.classList.remove("hidden");
-
 }
 
 // Fonction choix des niveaux de difficultés
@@ -37,7 +33,5 @@ function levelChoice () {
     }
     game();
 }
-
-
 
 // pour remove les class hidden ELEMENT.classList.remove("CLASS_NAME");
