@@ -10,18 +10,18 @@
     <body>
         <h1>Le jeu du plus ou moins</h1>
         <div id="startWindow">
-            <input type="button" value="Commencer" id="start">
+            <input type="button" value="Commencer" id="startButton">
         </div>
-        <div class="selectLevelWindow hidden" id="test">
-            <form id="formDifficulte">
+        <div id="selectLevelWindow" class="hidden" >
+            <div>
                 <label for="lvl1">Niveau 1</label>
                 <input type="radio" name="lvl" value="lvl1" class="radioButton" id="lvl1">
                 <label for="lvl2">Niveau 2</label>
                 <input type="radio" name="lvl" value="lvl2" class="radioButton" id="lvl2">
                 <button id="validerSelectLevelChoice">Valider</button>
-            </form>
+            </div>
         </div>
-        <div class="gameWindow">
+        <div id="gameWindow" class="hidden">
             <h2>Devinez quel est le chiffre</h2>
             <label for="reply">Réponse</label>
             <input type="text" name="reply" autocomplete="off">

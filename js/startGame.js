@@ -1,27 +1,31 @@
 // Déclarations des variables
-var start = document.getElementById('start');
+var selectLevelWindow = document.getElementById('selectLevelWindow');
+var startWindow = document.getElementById('startWindow');
+var gameWindow = document.getElementById('gameWindow');
+
+var startButton = document.getElementById('startButton');
 var validerSelectLevelButton = document.getElementById('validerSelectLevelChoice');
 var validerGameWindowButton = document.getElementById('validerGameWindow');
 
-var selectLevelWindow = document.querySelector('.selectLevelWindow');
+
 
 // Lancement des fonctions à partir des boutons
-start.addEventListener('click', startGame);
+startButton.addEventListener('click', startGame);
 validerSelectLevelButton.addEventListener('click', levelChoice);
 // validerGameWindowButton.addEventListener('click', );
 
 
 // Fonction lancement du jeu
 function startGame () {
-    start.setAttribute("class", "hidden");
+    startButton.setAttribute("class", "hidden");
     selectLevelWindow.classList.remove("hidden");
 
 }
 
 // Fonction choix des niveaux de difficultés
 function levelChoice () {
-    validerSelectLevelButton.setAttribute("class", "hidden");
-    divSelectLevelWindow.classList.remove("hidden");
+    selectLevelWindow.setAttribute("class", "hidden");
+    gameWindow.classList.remove("hidden");
 
     var radios = document.getElementsByName('lvl');
     var valeur;
