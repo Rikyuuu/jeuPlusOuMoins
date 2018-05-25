@@ -1,27 +1,27 @@
-// Déclarations des variables
+// Variable declaration
 var selectLevelWindow = document.getElementById('selectLevelWindow');
 var startWindow = document.getElementById('startWindow');
 var gameWindow = document.getElementById('gameWindow');
 
 var startButton = document.getElementById('startButton');
-var validerSelectLevelButton = document.getElementById('validerSelectLevelChoice');
-var validerGameWindowButton = document.getElementById('validerGameWindow');
+var validateSelectLevelButton = document.getElementById('validateSelectLevelChoice');
+/*var validateGameWindowButton = document.getElementById('validerGameWindow');*/
 
 var radios = document.getElementsByName('lvl');
 var levelValue;
 
-// Lancement des fonctions à partir des boutons
+// Launching functions from the buttons
 startButton.addEventListener('click', startGame);
-validerSelectLevelButton.addEventListener('click', levelChoice);
-// validerGameWindowButton.addEventListener('click', );
+validateSelectLevelButton.addEventListener('click', levelChoice);
+// validateGameWindowButton.addEventListener('click', );
 
-// Fonction lancement du jeu
+// Launch function of the game
 function startGame () {
     startButton.setAttribute("class", "hidden");
     selectLevelWindow.classList.remove("hidden");
 }
 
-// Fonction choix des niveaux de difficultés
+// Function choice of difficulty levels
 function levelChoice () {
     selectLevelWindow.setAttribute("class", "hidden");
     gameWindow.classList.remove("hidden");
@@ -34,4 +34,4 @@ function levelChoice () {
     game();
 }
 
-// pour remove les class hidden ELEMENT.classList.remove("CLASS_NAME");
+// for remove the hidden class  "ELEMENT.classList.remove("CLASS_NAME");"
