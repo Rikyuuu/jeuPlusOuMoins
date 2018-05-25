@@ -10,14 +10,25 @@
     <body>
         <h1>Le jeu du plus ou moins</h1>
         <div id="startWindow">
+            <h2>Règles du jeu :</h2>
+            <p>Le but du jeu est très simple, un chiffre inconnu est généré aléatoirement, vous devez le trouver.</p>
+            <p>Il vous sera indiqué à chaque réponse fausse si le nombre à trouver est supérieur ou inférieur au nombre que vous avez entré.</p>
             <input type="button" value="Commencer" id="startButton">
         </div>
-        <div id="selectLevelWindow" class="hidden" >
+        <div id="selectLevelWindow" class="hidden">
             <div>
+                <h2>Choisissez votre niveau de difficulté :</h2>
+                <select>
+                    <option name="lvl" value="lvl1" id="lvl1">Niveau 1 (entre 0 et 10)</option>
+                    <option name="lvl" value="lvl2" id="lvl2">Niveau 2 (entre 0 et 20)</option>
+                    <option name="lvl" value="lvl3" id="lvl3">Niveau 3 (entre 0 et 30)</option>
+                </select><!--
                 <label for="lvl1">Niveau 1</label>
                 <input type="radio" name="lvl" value="lvl1" class="radioButton" id="lvl1">
                 <label for="lvl2">Niveau 2</label>
                 <input type="radio" name="lvl" value="lvl2" class="radioButton" id="lvl2">
+                <label for="lvl3">Niveau 3</label>
+                <input type="radio" name="lvl" value="lvl3" class="radioButton" id="lvl3">-->
                 <button id="validerSelectLevelChoice">Valider</button>
             </div>
         </div>

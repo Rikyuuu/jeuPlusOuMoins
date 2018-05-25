@@ -8,7 +8,7 @@ var validerSelectLevelButton = document.getElementById('validerSelectLevelChoice
 var validerGameWindowButton = document.getElementById('validerGameWindow');
 
 var radios = document.getElementsByName('lvl');
-var valeur;
+var levelValue;
 
 
 
@@ -31,8 +31,8 @@ function levelChoice () {
     gameWindow.classList.remove("hidden");
 
     for(var i = 0; i < radios.length; i++){
-        if(radios[i].checked){
-            valeur = radios[i].value;
+        if(radios[i].selected){
+            levelValue = radios[i].value;
         }
     }
     game();
