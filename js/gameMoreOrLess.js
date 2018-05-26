@@ -22,7 +22,6 @@ function game () {
     var toGuess = Math.round(Math.random() * difficultLevel);
     var attempt = window.prompt('Entrez votre chiffre');
     attempt = parseInt(attempt, 10); // To convert the contents of the variable to int (base 10)
-    console.log(toGuess);
     while (attempt != toGuess && lives > 0) {
         lives--;
         if (attempt > toGuess) {
