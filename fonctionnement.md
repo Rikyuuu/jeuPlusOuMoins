@@ -1,14 +1,14 @@
-# ALGORITHME LANCEMENT DU JEU
+# ALGORITHME LANCEMENT DU JEU -> FONCTIONNEL
 QUAND l'utilisateur clique sur le bouton "commencer"
     cacher bouton "commencer"
-        Le bouton "commencer" lance la page de la sélection du niveau de difficulté
+        Le bouton "commencer" lance la sélection du niveau de difficultés
             l'utilisateur coche le niveau de difficulté (sur le formulaire)
             QUAND l'utilisateur clique sur le bouton "valider", on cache les champs des niveaux de difficultés et le bouton "valider".
-                Le button "valider" lance la page du jeu.
+                Le button "valider" lance le jeu.
 
-# ALGORITHME PAGE DU JEU
-AFFICHAGE 'Devinez le chiffre entre ' + 'variableMin' + ' et 'variableMax';
-Champs réponse pour l'utilisateur (avec placeholder "entrez votre chiffre");
+# ALGORITHME DU JEU
+AFFICHAGE 'Devinez le chiffre entre ' + 'variableMin' + ' et 'variableMax'
+Champs réponse pour l'utilisateur (avec placeholder "entrez votre chiffre")
 Bouton "valider" pour valider la réponse de l'utilisateur.
 
 TANT QUE essais différent de 0 et essais supérieur à 0
