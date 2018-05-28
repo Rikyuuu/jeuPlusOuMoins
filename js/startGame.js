@@ -95,7 +95,5 @@ function levelChoice () {
     }
     toGuess = Math.round(Math.random() * difficultLevel);
     console.log('Nombre à deviner fin fonction selectChoice ' + toGuess);
-    /* Launch function game()
-    game();*/
 }
 // End functions

@@ -23,13 +23,7 @@
                     <option name="lvl" value="lvl2" id="lvl2">Niveau 2 (entre 0 et 20)</option>
                     <option name="lvl" value="lvl3" id="lvl3">Niveau 3 (entre 0 et 30)</option>
                     <option name="lvl" value="lvl4" id="lvl4">Niveau challenger (entre 0 et 1000 avec une seule chance)</option>
-                </select><!--
-                <label for="lvl1">Niveau 1</label>
-                <input type="radio" name="lvl" value="lvl1" class="radioButton" id="lvl1">
-                <label for="lvl2">Niveau 2</label>
-                <input type="radio" name="lvl" value="lvl2" class="radioButton" id="lvl2">
-                <label for="lvl3">Niveau 3</label>
-                <input type="radio" name="lvl" value="lvl3" class="radioButton" id="lvl3">-->
+                </select>
                 <button id="validateSelectLevelChoice">Valider le choix</button><?php // "Valider le choix" button ?>
             </div>
         </div>
