@@ -1,43 +1,40 @@
 // Variable declaration
-var difficultLevel = 10;
+var validateGameWindowButton = document.getElementById('validateGameWindowButton');
+var gameInput = document.getElementById('gameInput');
+var showMessage = document.getElementById('showMessage');
+var answerLabel = document.getElementById('answerLabel');
+
+validateGameWindowButton.addEventListener('click', game);
+var toGuess = Math.round(Math.random() * difficultLevel);
+
 
 function game () {
-    var lives;
-    if (levelValue == 'lvl1') {
-        difficultLevel = 10;
-        lives = 3;
-    }
-    else if (levelValue == 'lvl2') {
-        difficultLevel = 20;
-        lives = 3;
-    }
-    else if (levelValue == 'lvl3') {
-        difficultLevel = 30;
-        lives = 3;
-    }
-    else if (levelValue == 'lvl4') {
-        difficultLevel = 1000;
-        lives = 1;
-    }
-    var toGuess = Math.round(Math.random() * difficultLevel);
-    var attempt = window.prompt('Entrez votre chiffre');
+    
+    var attempt = gameInput.value;
     attempt = parseInt(attempt, 10); // To convert the contents of the variable to int (base 10)
-    while (attempt != toGuess && lives > 0) {
+
+    if (attempt > toGuess && lives > 0) {
+        // alert('Le nombre a trouver est plus petit que ' + attempt + ' !');
+        showMessage.innerHTML = 'Le nombre a trouver est plus petit que ' + attempt + ' !';
+        Lives--;
+    }
+    else if (attempt < toGuess && lives > 0 ) {
+        // alert('Le nombre a trouver est plus grand que ' + attempt + ' !');
+        showMessage.innerHTML = 'Le nombre a trouver est plus grand que ' + attempt + ' !';
         lives--;
-        if (attempt > toGuess) {
-            alert('Le nombre a trouver est plus petit que ' + attempt + ' !');
-        }
-        else {
-            alert('Le nombre a trouver est plus grand que ' + attempt + ' !');
-        }
-        if (lives > 0) {
-            attempt = window.prompt('Retentez votre chance !');
-        }
-    }
-    if (attempt == toGuess) {
-        alert('Gagné !');
-    }
-    else {
-        alert('Perdu !');
-    }
+    } 
+    else if (attempt == toGuess && lives > 0 ) {
+        showMessage.innerHTML = 'Gagné !';
+        gameInput.style.display = "none";
+        validateGameWindowButton.style.display = "none";
+        answerLabel.style.display = "none";
+    } 
+    else if (attempt != toGuess && lives < 1 ) {
+        showMessage.innerHTML = 'perdue !';
+        gameInput.style.display = "none";
+        validateGameWindowButton.style.display = "none";
+        answerLabel.style.display = "none";
+    } 
+    console.log(toGuess);
+    console.log(lives);
 }

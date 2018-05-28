@@ -2,6 +2,7 @@
 var selectLevelWindow = document.getElementById('selectLevelWindow');
 var startWindow = document.getElementById('startWindow');
 var gameWindow = document.getElementById('gameWindow');
+var answerLabel = document.getElementById('answerLabel');
 
 
 // Variables to display the difficulty level chosen in index.html
@@ -10,18 +11,21 @@ var showDifficultLevel = document.getElementById('showDifficultLevel'); // for s
 
 var startButton = document.getElementById('startButton');
 var validateSelectLevelButton = document.getElementById('validateSelectLevelChoice');
-// var validateGameWindowButton = document.getElementById('validerGameWindow');
+
 
 var radios = document.getElementsByName('lvl');
 var levelValue;
+
+var difficultLevel = 10;
+var lives;
+
 // End variable declaration
 
 // Event launching functions from the buttons
 startButton.addEventListener('click', startGame);
 validateSelectLevelButton.addEventListener('click', levelChoice);
-// validateGameWindowButton.addEventListener('click', );
-// End event lauching functions
 
+// End event lauching functions
 
 // Functions
 
@@ -46,6 +50,23 @@ function levelChoice () {
         }
     }
 
+    if (levelValue == 'lvl1') {
+        difficultLevel = 10;
+        lives = 3;
+    }
+    else if (levelValue == 'lvl2') {
+        difficultLevel = 20;
+        lives = 3;
+    }
+    else if (levelValue == 'lvl3') {
+        difficultLevel = 30;
+        lives = 3;
+    }
+    else if (levelValue == 'lvl4') {
+        difficultLevel = 1000;
+        lives = 1;
+    }
+
     // The value compared is a value of the nodeList selected (example: [0]) so 0 is the level 1
     if(selectedShowLevelWindow == '0') {
         // To display the level chosen by the user
@@ -67,7 +88,7 @@ function levelChoice () {
         showDifficultLevel.innerHTML = 'Erreur lors du choix du niveau'
     }
 
-    // Launch function game()
-    game();
+    /* Launch function game()
+    game();*/
 }
 // End functions
