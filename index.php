@@ -13,9 +13,9 @@
             <h2>Règles du jeu :</h2>
             <p>Le but du jeu est très simple, un nombre inconnu est généré aléatoirement, vous devez le trouver.</p>
             <p>Il vous sera indiqué à chaque réponse fausse(s) si le nombre à trouver est supérieur ou inférieur au nombre que vous avez entré.</p>
-            <input type="button" value="Commencer" id="startButton">
+            <input type="button" value="Commencer" id="startButton"><?php // "commencer" button ?>
         </div>
-        <div id="selectLevelWindow" class="hidden">
+        <div id="selectLevelWindow" class="hidden"> <?php // Appears when the user clicks on the "commencer" button ?>
             <div>
                 <h2>Choisissez votre niveau de difficulté :</h2>
                 <select id="selectLevelChoice">
@@ -30,17 +30,17 @@
                 <input type="radio" name="lvl" value="lvl2" class="radioButton" id="lvl2">
                 <label for="lvl3">Niveau 3</label>
                 <input type="radio" name="lvl" value="lvl3" class="radioButton" id="lvl3">-->
-                <button id="validateSelectLevelChoice">Valider</button>
+                <button id="validateSelectLevelChoice">Valider le choix</button><?php // "Valider le choix" button ?>
             </div>
         </div>
-        <div id="gameWindow" class="hidden">
+        <div id="gameWindow" class="hidden"><?php // Appears when the user clicks on the "Valider le choix" button ?>
             <h2>Devinez quel est le chiffre</h2>
-            <h3 id="showDifficultLevel"></h3>
-            <p id="showMessage"></p>
-            <div id="divResponse">
+            <h3 id="showDifficultLevel"></h3><?php // Displays the level of difficulty chosen by the user ?>
+            <p id="showMessage"></p> <?php // Displays the message won, lost, or the help message ?>
+            <div id="divResponse"> <?php // Contains a label, an input for the user's response, and a button to validate the answer ?>
                 <label for="reply">Réponse</label>
                 <input type="text" name="reply" autocomplete="off" id="gameInput">
-                <button id="validateGameWindowButton">Valider</button>
+                <button id="validateGameWindowButton">Valider la réponse</button>
             </div>
         </div>
         
