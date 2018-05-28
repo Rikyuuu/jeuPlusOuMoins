@@ -52,19 +52,19 @@ function levelChoice () {
 
     if (levelValue == 'lvl1') {
         difficultLevel = 10;
-        lives = 3;
+        lives = 2;
     }
     else if (levelValue == 'lvl2') {
         difficultLevel = 20;
-        lives = 3;
+        lives = 2;
     }
     else if (levelValue == 'lvl3') {
         difficultLevel = 30;
-        lives = 3;
+        lives = 2;
     }
     else if (levelValue == 'lvl4') {
         difficultLevel = 1000;
-        lives = 1;
+        lives = 0;
     }
 
     // The value compared is a value of the nodeList selected (example: [0]) so 0 is the level 1
@@ -87,6 +87,8 @@ function levelChoice () {
     else {
         showDifficultLevel.innerHTML = 'Erreur lors du choix du niveau'
     }
+    console.log(lives);
+
 
     /* Launch function game()
     game();*/

@@ -16,11 +16,13 @@ function game () {
     if (attempt > toGuess && lives > 0) {
         // alert('Le nombre a trouver est plus petit que ' + attempt + ' !');
         showMessage.innerHTML = 'Le nombre a trouver est plus petit que ' + attempt + ' !';
+        gameInput.value = '';
         Lives--;
     }
     else if (attempt < toGuess && lives > 0 ) {
         // alert('Le nombre a trouver est plus grand que ' + attempt + ' !');
         showMessage.innerHTML = 'Le nombre a trouver est plus grand que ' + attempt + ' !';
+        gameInput.value = '';
         lives--;
     } 
     else if (attempt == toGuess && lives > 0 ) {
@@ -35,6 +37,10 @@ function game () {
         validateGameWindowButton.style.display = "none";
         answerLabel.style.display = "none";
     } 
+    else {
+        showMessage.innerHTML = 'Entrez un nombre!';
+    } 
     console.log(toGuess);
     console.log(lives);
+    console.log(attempt);
 }
