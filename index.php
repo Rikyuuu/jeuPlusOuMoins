@@ -36,6 +36,7 @@
         <div id="gameWindow" class="hidden"><?php // Appears when the user clicks on the "Valider le choix" button ?>
             <h2>Devinez quel est le chiffre</h2>
             <h3 id="showDifficultLevel"></h3><?php // Displays the level of difficulty chosen by the user ?>
+            <p id="showLives"></p>
             <p id="showMessage"></p> <?php // Displays the message won, lost, or the help message ?>
             <div id="divResponse"> <?php // Contains a label, an input for the user's response, and a button to validate the answer ?>
                 <label for="reply">Réponse</label>

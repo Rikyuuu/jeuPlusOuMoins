@@ -2,6 +2,7 @@
 var selectLevelWindow = document.getElementById('selectLevelWindow');
 var startWindow = document.getElementById('startWindow');
 var gameWindow = document.getElementById('gameWindow');
+var showLives = document.getElementById('showLives');
 
 
 // Variables to display the difficulty level chosen in index.html
@@ -54,18 +55,22 @@ function levelChoice () {
     if (levelValue == 'lvl1') {
         difficultLevel = 10;
         lives = 3;
+        showLives.innerHTML = 'Il vous reste ' + lives + ' vies.';
     }
     else if (levelValue == 'lvl2') {
         difficultLevel = 20;
         lives = 3;
+        showLives.innerHTML = 'Il vous reste ' + lives + ' vies.';
     }
     else if (levelValue == 'lvl3') {
         difficultLevel = 30;
         lives = 3;
+        showLives.innerHTML = 'Il vous reste ' + lives + ' vies.';
     }
     else if (levelValue == 'lvl4') {
         difficultLevel = 1000;
-        lives = 0;
+        lives = 1;
+        showLives.innerHTML = 'Vous n\'avez qu\'une vie.';
     }
 
     // The value compared is a value of the nodeList selected (example: [0]) so 0 is the level 1
@@ -90,8 +95,6 @@ function levelChoice () {
     }
     toGuess = Math.round(Math.random() * difficultLevel);
     console.log('Nombre à deviner fin fonction selectChoice ' + toGuess);
-
-    
     /* Launch function game()
     game();*/
 }
