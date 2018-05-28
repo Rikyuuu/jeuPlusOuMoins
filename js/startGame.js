@@ -2,7 +2,6 @@
 var selectLevelWindow = document.getElementById('selectLevelWindow');
 var startWindow = document.getElementById('startWindow');
 var gameWindow = document.getElementById('gameWindow');
-var answerLabel = document.getElementById('answerLabel');
 
 
 // Variables to display the difficulty level chosen in index.html
@@ -14,10 +13,12 @@ var validateSelectLevelButton = document.getElementById('validateSelectLevelChoi
 
 
 var radios = document.getElementsByName('lvl');
-var levelValue;
+var levelValue= null;
 
-var difficultLevel = 10;
-var lives;
+var toGuess = null;
+var difficultLevel = null;
+var lives = null;
+
 
 // End variable declaration
 
@@ -37,14 +38,14 @@ function startGame () {
 
 // Function choice of difficulty levels
 function levelChoice () {
-    
+    console.log('Nombre à deviner debut fonction selectChoice ' + toGuess);
     // Declaration of a variable equal to the level of difficulty selected
     var selectedShowLevelWindow = showLevelWindow.selectedIndex;
 
     selectLevelWindow.setAttribute("class", "hidden");
     gameWindow.classList.remove("hidden");
 
-    for(var i = 0; i < radios.length; i++){
+    for(var i = 0; i < radios.length; i++) {
         if(radios[i].selected){
             levelValue = radios[i].value;
         }
@@ -52,15 +53,15 @@ function levelChoice () {
 
     if (levelValue == 'lvl1') {
         difficultLevel = 10;
-        lives = 2;
+        lives = 3;
     }
     else if (levelValue == 'lvl2') {
         difficultLevel = 20;
-        lives = 2;
+        lives = 3;
     }
     else if (levelValue == 'lvl3') {
         difficultLevel = 30;
-        lives = 2;
+        lives = 3;
     }
     else if (levelValue == 'lvl4') {
         difficultLevel = 1000;
@@ -85,11 +86,12 @@ function levelChoice () {
         showDifficultLevel.innerHTML = 'Niveau challenger (nombre entre 0 et 1000 avec une seule chance)';
     }
     else {
-        showDifficultLevel.innerHTML = 'Erreur lors du choix du niveau'
+        showDifficultLevel.innerHTML = 'Erreur lors du choix du niveau';
     }
-    console.log(lives);
+    toGuess = Math.round(Math.random() * difficultLevel);
+    console.log('Nombre à deviner fin fonction selectChoice ' + toGuess);
 
-
+    
     /* Launch function game()
     game();*/
 }
