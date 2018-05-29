@@ -55,17 +55,17 @@ function levelChoice () {
     if (levelValue == 'lvl1') {
         difficultLevel = 10;
         lives = 3;
-        showLives.innerHTML = 'Il vous reste ' + lives + ' vies.';
+        showLives.innerHTML = 'Vous avez' + lives + ' vies.';
     }
     else if (levelValue == 'lvl2') {
         difficultLevel = 20;
         lives = 3;
-        showLives.innerHTML = 'Il vous reste ' + lives + ' vies.';
+        showLives.innerHTML = 'Vous avez' + lives + ' vies.';
     }
     else if (levelValue == 'lvl3') {
         difficultLevel = 30;
         lives = 3;
-        showLives.innerHTML = 'Il vous reste ' + lives + ' vies.';
+        showLives.innerHTML = 'Vous avez ' + lives + ' vies.';
     }
     else if (levelValue == 'lvl4') {
         difficultLevel = 1000;
