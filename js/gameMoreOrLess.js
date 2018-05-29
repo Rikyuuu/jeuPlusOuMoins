@@ -7,7 +7,7 @@ var divResponse = document.getElementById('divResponse');
 // Call the game function when the button click is affected
 validateGameWindowButton.addEventListener('click', game);
 
-// To allow the user to validate his answer by clicking on the enter key
+// To allow the user to validate his answer by clicking on the enter key when the user has the focus on the input to write an answer
 gameInput.addEventListener("keyup", function(event) { // Event for keyup
     event.preventDefault();
     if (event.keyCode == 13) { // "enter" key code is 13
