@@ -4,8 +4,16 @@ var gameInput = document.getElementById('gameInput');
 var showMessage = document.getElementById('showMessage');
 var divResponse = document.getElementById('divResponse');
 
+// Call the game function when the button click is affected
 validateGameWindowButton.addEventListener('click', game);
 
+// To allow the user to validate his answer by clicking on the enter key
+gameInput.addEventListener("keyup", function(event) { // Event for keyup
+    event.preventDefault();
+    if (event.keyCode == 13) { // "enter" key code is 13
+        validateGameWindowButton.click(); // Give the same behavior as when a click is made on the button
+    }
+});
 
 function game () {
     console.log('Nombre à deviner avant début fonction jeu ' + toGuess);
