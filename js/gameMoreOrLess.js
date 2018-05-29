@@ -29,8 +29,7 @@ function game () {
         gameInput.value = '';
 
         // Challenger level conditions
-        if (levelValue == 'lvl4')
-        {
+        if (levelValue == 'lvl4') {
             // Displays "Vous n'avez plus de vie."
             showLives.innerHTML = 'Vous n\'avez qu\'une vie.';
         }
@@ -72,8 +71,7 @@ function game () {
         gameInput.value = '';
 
         // Challenger level conditions
-        if (levelValue == 'lvl4')
-        {
+        if (levelValue == 'lvl4') {
             // Displays "Vous n'avez plus de vie."
             showLives.innerHTML = 'Vous n\'avez qu\'une vie.';
         }
@@ -108,10 +106,9 @@ function game () {
             showMessage.innerHTML = 'Le nombre a trouver est plus grand que ' + attempt + ' !';
         }
     } 
-    else if (attempt == toGuess && lives > 0){
+    else if (attempt == toGuess && lives > 0) {
         // Challenger level conditions
-        if (levelValue == 'lvl4')
-        {
+        if (levelValue == 'lvl4') {
             // Displays "Vous n'avez plus de vie."
             showLives.innerHTML = 'Vous n\'avez qu\'une vie.';
         }
@@ -147,5 +144,6 @@ function game () {
     else {
         // Displays "Entrez un nombre !"
         showMessage.innerHTML = 'Entrez un nombre !';
-    } 
-}
+    }
+    
+} 

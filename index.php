@@ -37,6 +37,7 @@
                 <input type="text" name="reply" autocomplete="off" id="gameInput">
                 <button id="validateGameWindowButton">Valider la réponse</button>
             </div>
+            <button id="replayGame">Rejouer</button>
         </div>
         
         <script src="js/startGame.js"></script>

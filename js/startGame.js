@@ -5,6 +5,8 @@ var gameWindow = document.getElementById('gameWindow');
 var showLives = document.getElementById('showLives');
 
 
+var replayGame = document.getElementById('replayGame');
+
 // Variables to display the difficulty level chosen in index.html
 var showLevelWindow = document.getElementById('selectLevelChoice'); // To retrieve the text according to the selected
 var showDifficultLevel = document.getElementById('showDifficultLevel'); // for show the difficult level in index.html
@@ -20,6 +22,8 @@ var toGuess = null;
 var difficultLevel = null;
 var lives = null;
 
+
+replayGame.addEventListener('click', restartGame);
 
 // End variable declaration
 
@@ -39,7 +43,6 @@ function startGame () {
 
 // Function choice of difficulty levels
 function levelChoice () {
-    console.log('Nombre à deviner debut fonction selectChoice ' + toGuess);
     // Declaration of a variable equal to the level of difficulty selected
     var selectedShowLevelWindow = showLevelWindow.selectedIndex;
 
@@ -55,12 +58,12 @@ function levelChoice () {
     if (levelValue == 'lvl1') {
         difficultLevel = 10;
         lives = 3;
-        showLives.innerHTML = 'Vous avez' + lives + ' vies.';
+        showLives.innerHTML = 'Vous avez ' + lives + ' vies.';
     }
     else if (levelValue == 'lvl2') {
         difficultLevel = 20;
         lives = 3;
-        showLives.innerHTML = 'Vous avez' + lives + ' vies.';
+        showLives.innerHTML = 'Vous avez ' + lives + ' vies.';
     }
     else if (levelValue == 'lvl3') {
         difficultLevel = 30;
@@ -94,6 +97,10 @@ function levelChoice () {
         showDifficultLevel.innerHTML = 'Erreur lors du choix du niveau';
     }
     toGuess = Math.round(Math.random() * difficultLevel);
-    console.log('Nombre à deviner fin fonction selectChoice ' + toGuess);
+}
+
+function restartGame() {
+    gameWindow.setAttribute('class','hidden');
+    startGame();
 }
 // End functions
