@@ -34,7 +34,7 @@
             <p id="showMessage"></p> <?php // Displays the message won, lost, or the help message ?>
             <div id="divResponse"> <?php // Contains a label, an input for the user's response, and a button to validate the answer ?>
                 <label for="reply">Réponse</label>
-                <input type="text" name="reply" autocomplete="off" id="gameInput">
+                <input type="number" name="reply" autocomplete="off" id="gameInput">
                 <button id="validateGameWindowButton">Valider la réponse</button>
             </div>
             <button id="replayGame">Rejouer</button>
