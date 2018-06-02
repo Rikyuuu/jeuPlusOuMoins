@@ -32,16 +32,13 @@ function game () {
         if (levelValue == 'lvl4') {
             // Displays "Vous n'avez plus de vie."
             showLives.innerHTML = 'Vous n\'avez qu\'une vie.';
-        }
-        else if(levelValue == 'lvl4' && attempt === NaN) {
+        } else if(levelValue == 'lvl4' && attempt === NaN) {
             // Displays "Entrez un nombre !"
             showLives.innerHTML = 'Entrez un nombre !';
-        }
-        else if (lives > 1) {
+        } else if (lives > 1) {
             // Displays the number of lives remaining
             showLives.innerHTML = 'Il vous reste ' + lives + ' vies.';
-        }
-        else if (lives == 1) {
+        } else if (lives == 1) {
             // Displays the number of lives remaining
             showLives.innerHTML = 'Il vous reste ' + lives + ' vie.';
         }
@@ -55,15 +52,12 @@ function game () {
 
             // Hide the div which contains the label of the answer, the fields of the answer which allows the user to enter a number, and the button validate to validate the answer
             divResponse.setAttribute("class", "hidden");
-        }
-        // If the user still has lives, then a help message is displayed
-        else {
+        } else { // If the user still has lives, then a help message is displayed
             // alert('Le nombre a trouver est plus grand que ' + attempt + ' !');
             // Help message
             showMessage.innerHTML = 'Le nombre a trouver est plus petit que ' + attempt + ' !';
         }
-    }
-    else if (attempt < toGuess && lives > 0) {
+    } else if (attempt < toGuess && lives > 0) {
         // Remove a live
         lives--;
 
@@ -74,16 +68,13 @@ function game () {
         if (levelValue == 'lvl4') {
             // Displays "Vous n'avez plus de vie."
             showLives.innerHTML = 'Vous n\'avez qu\'une vie.';
-        }
-        else if(levelValue == 'lvl4' && attempt === NaN) {
+        } else if(levelValue == 'lvl4' && attempt === NaN) {
             // Displays "Entrez un nombre !"
             showLives.innerHTML = 'Entrez un nombre !';
-        }
-        else if (lives > 1) {
+        } else if (lives > 1) {
             // Displays the number of lives remaining
             showLives.innerHTML = 'Il vous reste ' + lives + ' vies.';
-        }
-        else if (lives == 1) {
+        } else if (lives == 1) {
             // Displays the number of lives remaining
             showLives.innerHTML = 'Il vous reste ' + lives + ' vie.';
         }
@@ -97,30 +88,24 @@ function game () {
 
             // Hide the div which contains the label of the answer, the fields of the answer which allows the user to enter a number, and the button validate to validate the answer
             divResponse.setAttribute("class", "hidden");
-        }
-        // If the user still has lives, then a help message is displayed
-        else {
+        } else { // If the user still has lives, then a help message is displayed
             // alert('Le nombre a trouver est plus grand que ' + attempt + ' !');
 
             // Help message
             showMessage.innerHTML = 'Le nombre a trouver est plus grand que ' + attempt + ' !';
         }
-    } 
-    else if (attempt == toGuess && lives > 0) {
+    } else if (attempt == toGuess && lives > 0) {
         // Challenger level conditions
         if (levelValue == 'lvl4') {
             // Displays "Vous n'avez plus de vie."
             showLives.innerHTML = 'Vous n\'avez qu\'une vie.';
-        }
-        else if(levelValue == 'lvl4' && attempt === NaN) {
+        } else if(levelValue == 'lvl4' && attempt === NaN) {
             // Displays "Entrez un nombre !"
             showLives.innerHTML = 'Entrez un nombre !';
-        }
-        else if (lives > 1) {
+        } else if (lives > 1) {
             // Displays the number of lives remaining
             showLives.innerHTML = 'Il vous reste ' + lives + ' vies.';
-        }
-        else if (lives == 1) {
+        } else if (lives == 1) {
             // Displays the number of lives remaining
             showLives.innerHTML = 'Il vous reste ' + lives + ' vie.';
         }
@@ -130,8 +115,7 @@ function game () {
 
         // Hide the div which contains the label of the answer, the fields of the answer which allows the user to enter a number, and the button validate to validate the answer
         divResponse.setAttribute("class", "hidden");
-    } 
-    else if (attempt != toGuess && lives < 1) {
+    } else if (attempt != toGuess && lives < 1) {
         // Displays "Vous n'avez plus de vie."
         showLives.innerHTML = 'Vous n\'avez plus de vie.';
         // Displays "Vous avez perdu !"
@@ -139,9 +123,7 @@ function game () {
 
         // Hide the div which contains the label of the answer, the fields of the answer which allows the user to enter a number, and the button validate to validate the answer
         divResponse.setAttribute("class", "hidden");
-    }
-    
-    else {
+    } else {
         // Displays "Entrez un nombre !"
         showMessage.innerHTML = 'Entrez un nombre !';
     }
