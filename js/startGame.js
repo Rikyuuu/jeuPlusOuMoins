@@ -22,6 +22,9 @@ var toGuess = null;
 var difficultLevel = null;
 var lives = null;
 
+// variable used in function restartGame()
+var restart = null;
+
 
 replayGame.addEventListener('click', restartGame);
 
@@ -95,5 +98,10 @@ function levelChoice () {
 function restartGame() {
     gameWindow.setAttribute('class','hidden');
     startGame();
+    validateSelectLevelChoice.addEventListener('click', game);
+    divResponse.classList.remove('hidden');
+
+    // Redefines the restart variable equal to 1 when executing the restartGame() function
+    restart = 1;
 }
 // End functions

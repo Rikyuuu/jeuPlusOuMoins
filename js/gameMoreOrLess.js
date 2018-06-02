@@ -34,7 +34,7 @@ function game () {
             showLives.innerHTML = 'Vous n\'avez qu\'une vie.';
         } else if(levelValue == 'lvl4' && attempt === NaN) {
             // Displays "Entrez un nombre !"
-            showLives.innerHTML = 'Entrez un nombre !';
+            showMessage.innerHTML = 'Entrez un nombre !';
         } else if (lives > 1) {
             // Displays the number of lives remaining
             showLives.innerHTML = 'Il vous reste ' + lives + ' vies.';
@@ -70,7 +70,7 @@ function game () {
             showLives.innerHTML = 'Vous n\'avez qu\'une vie.';
         } else if(levelValue == 'lvl4' && attempt === NaN) {
             // Displays "Entrez un nombre !"
-            showLives.innerHTML = 'Entrez un nombre !';
+            showMessage.innerHTML = 'Entrez un nombre !';
         } else if (lives > 1) {
             // Displays the number of lives remaining
             showLives.innerHTML = 'Il vous reste ' + lives + ' vies.';
@@ -101,7 +101,7 @@ function game () {
             showLives.innerHTML = 'Vous n\'avez qu\'une vie.';
         } else if(levelValue == 'lvl4' && attempt === NaN) {
             // Displays "Entrez un nombre !"
-            showLives.innerHTML = 'Entrez un nombre !';
+            showMessage.innerHTML = 'Entrez un nombre !';
         } else if (lives > 1) {
             // Displays the number of lives remaining
             showLives.innerHTML = 'Il vous reste ' + lives + ' vies.';
@@ -123,9 +123,12 @@ function game () {
 
         // Hide the div which contains the label of the answer, the fields of the answer which allows the user to enter a number, and the button validate to validate the answer
         divResponse.setAttribute("class", "hidden");
+    } else if(restart == 1) { // The condition therefore checks whether the restartGame () function was executed before the function game()
+        // Removes the display of a previous message
+        showMessage.innerHTML = '';
+        // Redefines the variable equal to null to avoid returning to the condition when the user clicks the "Valider la réponse" button
+        restart = null;
     } else {
-        // Displays "Entrez un nombre !"
         showMessage.innerHTML = 'Entrez un nombre !';
     }
-    
 } 
